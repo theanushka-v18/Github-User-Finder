@@ -1,27 +1,30 @@
-import { useState } from 'react';
-import axios from 'axios';
-import './App.css';
+// import { useState } from 'react';
+// import axios from 'axios';
+// import './App.css';
+
+import GithubUserFinder from "./GithubUserFinder";
 
 function App() {
 
-  const [inputText, setInputText] = useState("");
-  const [userInfo, setUserInfo] = useState({});
-  const [error, setError] = useState();
-  const [flag, setFlag] = useState(false);
+//   const [inputText, setInputText] = useState("");
+//   const [userInfo, setUserInfo] = useState({});
+//   const [error, setError] = useState();
+//   const [flag, setFlag] = useState(false);
 
-async function handleSearch() {
-    setFlag(true);
-    axios.get(`https://api.github.com/users/${inputText}`)
-    .then((response) => {setUserInfo(response.data); setError(null);})
-    .catch((err) => {
-      setUserInfo(null);
-      setError("User Not Found");
-    })
-  }
+// async function handleSearch() {
+//     setFlag(true);
+//     axios.get(`https://api.github.com/users/${inputText}`)
+//     .then((response) => {setUserInfo(response.data); setError(null);})
+//     .catch((err) => {
+//       setUserInfo(null);
+//       setError("User Not Found");
+//     })
+//   }
 
   return (
     <>
-      <div className='search-container'>
+    <GithubUserFinder />
+      {/* <div className='search-container'>
         <input type='text' className='search-input' placeholder='Search user...' onChange={(e) => {setInputText(e.target.value)}} value={inputText} />
         <button className='search-btn' onClick={handleSearch}>Search</button>
       </div>
@@ -50,7 +53,7 @@ async function handleSearch() {
             </div>
           </div>
         )
-      }
+      } */}
     </>
   );
 }
