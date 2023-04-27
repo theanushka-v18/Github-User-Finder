@@ -113,6 +113,11 @@ h5 {
   letter-spacing: 0.1rem;
   font-size: 1rem;
   margin-top: -1rem;
+  
+}
+
+a {
+  text-decoration: 1px underline #FB9DA0;
 }
 
 .error {

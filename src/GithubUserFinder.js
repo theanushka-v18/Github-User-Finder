@@ -31,7 +31,7 @@ const GithubUserFinder = () => {
                 <div className='top'>
                 <img src={userInfo.avatar_url} alt='Developer Photo' />
                 <h3>{userInfo.name}</h3>
-                <h5>{userInfo.login}</h5>
+                <a href={userInfo.html_url} target='_blank'><h5>{userInfo.login}</h5></a>
                 <p id='bio'>{userInfo.bio}</p>
                 </div>
                 <div className='bottom'>
